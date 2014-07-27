@@ -26,9 +26,6 @@
         "satooshi/php-coveralls": "dev-master"
     },
     "autoload": {
-        "psr-0": {
-            "DesignmovesPhpSettings": "src/"
-        },
         "classmap": [
             "Module.php"
         ]
