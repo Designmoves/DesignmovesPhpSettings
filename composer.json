@@ -1,0 +1,36 @@
+{
+    "name": "designmoves/designmoves-php-settings",
+    "description": "Zend Framework 2 PHP settings module",
+    "type": "library",
+    "keywords": [
+        "zend",
+        "framework",
+        "zf2",
+        "php",
+        "settings"
+    ],
+    "homepage": "http://www.designmoves.nl/",
+    "license": "BSD-3-Clause",
+    "require": {
+        "php": ">=5.3.23",
+        "zendframework/zend-config": "2.*",
+        "zendframework/zend-eventmanager": "2.*",
+        "zendframework/zend-loader": "2.*",
+        "zendframework/zend-modulemanager": "2.*",
+        "zendframework/zend-servicemanager": "2.*",
+        "zendframework/zend-stdlib": "2.*"
+    },
+    "require-dev": {
+        "fabpot/php-cs-fixer": "dev-master",
+        "phpunit/phpunit": "4.*",
+        "satooshi/php-coveralls": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "DesignmovesPhpSettings": "src/"
+        },
+        "classmap": [
+            "Module.php"
+        ]
+    }
+}
