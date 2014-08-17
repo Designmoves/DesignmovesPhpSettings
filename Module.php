@@ -33,6 +33,7 @@ namespace DesignmovesPhpSettings;
 
 use Zend\EventManager\EventInterface;
 use Zend\ModuleManager\Feature;
+use Zend\ModuleManager\ModuleEvent;
 use Zend\ModuleManager\ModuleManagerInterface;
 
 class Module implements Feature\InitProviderInterface
@@ -44,7 +45,7 @@ class Module implements Feature\InitProviderInterface
     {
         $eventManager = $moduleManager->getEventManager();
 
-        $event    = 'loadModules.post';
+        $event    = ModuleEvent::EVENT_LOAD_MODULES_POST;
         $callback = array($this, 'onModulesLoaded');
         $priority = 10000;
         $eventManager->attach($event, $callback, $priority);

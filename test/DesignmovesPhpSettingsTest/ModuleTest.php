@@ -64,7 +64,7 @@ class ModuleTest extends PHPUnit_Framework_TestCase
 
         $this->module->init($moduleManager);
 
-        $eventName = 'loadModules.post';
+        $eventName = ModuleEvent::EVENT_LOAD_MODULES_POST;
         $queue     = $eventManager->getListeners($eventName);
         $this->assertCount(1, $queue);
 
